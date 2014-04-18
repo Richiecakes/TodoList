@@ -1,0 +1,124 @@
+body {
+	font-family: monospace;
+	width: 520px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#todoapp {
+	background-color: #EEE;
+	padding: 20px;
+	margin-bottom: 40px;
+	border-radius: 0 0 5px 5px;
+}
+
+#todoapp h1 {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+#todoapp input[type="text"] {
+	width: 460px;
+	font-size: 24px;
+	font-family: inherit;
+	border: full;
+	padding: 6px;
+}
+
+#todoapp input::-webkit-input-placeholder {
+	text-align: center;
+	font-style: italic;
+}
+
+#main {
+	display: none;
+}
+
+#todo-list {
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+}
+
+#todo-list li {
+	padding: 20px;
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#todo-list li:last-child {
+	border-bottom: none;
+}
+
+#todo-list li.done label {
+	color: #777777;
+	text-decoration: line-through;
+}
+
+#todo-list .destroy {
+	position: absolute;
+	right: 5px;
+	top: 23px;
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background-color: #AAA;
+}
+
+#todo-list li:hover .destroy {
+	display: block;
+}
+
+#todo-list li.editing .edit {
+	display: block;
+	width: 420px;
+	padding: 15px;
+	margin: 0;
+}
+
+#todo-list li.editing .view {
+	display: none;
+}
+
+#todo-list li .view label {
+	word-break: break-word;
+}
+
+#todo-list li .edit {
+	display: none;
+}
+
+#todoapp footer {
+	display: none;
+	margin: 0 -20px -20px -20px;
+	overflow: hidden;
+	color: #555555;
+	background: #CCCCCC;
+	border-top: 1px solid #ededed;
+	padding: 0 20px;
+	line-height: 37px;
+}
+
+#clear-completed {
+	float: right;
+	background-color: #AAAAAA;
+	border-radius: 15px;
+	padding: 0 10px;
+}
+
+#clear-completed:hover {
+	background-color: #888888;
+}
+
+#instructions {
+	text-align: center;
+	margin: 10px auto;
+}
+
+#credits {
+	text-align: center;
+}
