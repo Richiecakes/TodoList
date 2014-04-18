@@ -20,7 +20,7 @@ $(function() {
 
 		model: Todo,
 
-		localStorage: new Backbone.LocalStorage("todos-backbone"),
+		localStorage: new Backbone.LocalStorage("todos-backbone-rich"),
 
 		done: function() {
 			return this.where({done: true});
@@ -55,7 +55,7 @@ $(function() {
 			"blur .edit"      : "close"
 		},
 
-		initialise: function() {
+		initialize: function() {
 			this.listenTo(this.model, 'change', this.render);
 			this.listenTo(this.model, 'destroy', this.remove);
 		},
@@ -103,14 +103,14 @@ $(function() {
 		statsTemplate: _.template($('#stats-template').html()),
 
 		events: {
-			"keypress #new-todo"     : "createOnEnter",
+			"keypress #todo"     : "createOnEnter",
 			"click #clear-completed" : "clearCompleted",
 			"click #toggle-all"      : "toggleAllComplete"
 		},
 
-		initialise: function() {
-			this.input = this.$("#new-todo");
-			this.allCheckBox = this.$("#toggle-all")[0];
+		initialize: function() {
+			this.input = this.$("#todo");
+      		this.allCheckBox = this.$("#toggle-all")[0];
 
 			this.listenTo(Todos, 'add', this.addOne);
 			this.listenTo(Todos, 'reset', this.addAll);
